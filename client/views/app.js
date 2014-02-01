@@ -29,6 +29,11 @@ var syncr = {
 Template.app.helpers({
     content: function () {
         return Session.get('content');
+    },
+    userImage: function () {
+        if (Meteor.user().services.twitter) {
+            return Meteor.user().services.twitter.id;
+        }
     }
 });
 
