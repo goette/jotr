@@ -30,9 +30,9 @@ Template.app.helpers({
     content: function () {
         return Session.get('content');
     },
-    userImage: function () {
+    userImageUrl: function () {
         if (Meteor.user().services.twitter) {
-            return Meteor.user().services.twitter.id;
+            return Meteor.user().services.twitter.profile_image_url;
         }
     }
 });

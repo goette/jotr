@@ -1,4 +1,6 @@
 <template name="app">
-    {{#if currentUser}}{{userImage}}{{/if}}
+    {{#if currentUser}}
+        <img src="{{userImageUrl}}" alt="" class="user-image">
+    {{/if}}
     <textarea class="pad-input" placeholder="" id="padin">{{content}}</textarea>
 </template>
