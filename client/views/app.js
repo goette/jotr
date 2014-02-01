@@ -1,16 +1,48 @@
-Template.app.helpers({
-    placeholdR: function () {
-        var current = Meteor.user();
-        if (current) {
-            return'Hey ' + current.username + ', write some stuff...';
-        } else {
-            return 'Hey Nobody, you should login...';
+var syncr = {
+    fire: function () {
+        var self = this;
+        self.cancel();
+        self.timeoutID = window.setTimeout(function () {
+            self.update();
+        }, 1000);
+    },
+    cancel: function () {
+        if(typeof this.timeoutID === "number") {
+            window.clearTimeout(this.timeoutID);
+            delete this.timeoutID;
         }
+    },
+    update: function () {
+        this.writeToDb();
+        delete this.timeoutID;
+    },
+    writeToDb: function () {
+        var content = $('#padin').val();
+        Meteor.call('post', content, function (error, id) {
+            if (error){
+                return alert(error.reason);
+            }
+        });
+    }
+};
+
+Template.app.helpers({
+    content: function () {
+        return Session.get('content');
     }
 });
 
+Template.app.rendered = function () {
+    Deps.autorun(function () {
+        var data = Pads.findOne({'u_id': Meteor.userId()});
+        if (data) {
+            Session.set('content', data.u_pad);
+        } 
+    });
+};
+
 Template.app.events({
-    'keyup .pad': function () {
-        $('.text').text($('textarea.pad').val());
+    'keyup #padin': function (e) {
+        syncr.fire();
     }
 });
