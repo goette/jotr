@@ -31,8 +31,8 @@ Template.app.helpers({
         return Session.get('content');
     },
     userImageUrl: function () {
-        if (Meteor.user().services.twitter) {
-            return Meteor.user().services.twitter.profile_image_url;
+        if (Meteor.user().services) {
+            return Meteor.user().services.google.picture;
         }
     }
 });
@@ -47,7 +47,50 @@ Template.app.rendered = function () {
 };
 
 Template.app.events({
-    'keyup #padin': function (e) {
-        syncr.fire();
+    'keyup #padin': function () {
+        if (Meteor.user()) {
+            syncr.fire();
+        }
+    },
+    'paste #padin': function () {
+        if (Meteor.user()) {
+            syncr.fire();
+        }
     }
 });
+
+/*
+syncr =
+    fire: ->
+        @cancel()
+        @timeoutID = window.setTimeout =>
+            @update()
+        , 1000
+    cancel: ->
+        if typeof @timeoutID is "number"
+            window.clearTimeout(@timeoutID)
+            delete @timeoutID
+    update: ->
+        @writeToDb()
+        delete @timeoutID
+    writeToDb: ->
+        content = $('#padin').val()
+        Meteor.call 'post', content, (error, id) ->
+            alert error.reason if error
+
+Template.app.helpers
+    content: ->
+        Session.get 'content'
+    userImageUrl: ->
+        Meteor.user().services.google.picture if Meteor.user().services.google
+
+Template.app.rendered = ->
+    Deps.autorun ->
+        data = Pads.findOne
+            'u_id': Meteor.userId()
+        Session.set('content', data.u_pad) if data 
+
+Template.app.events
+    'keyup #padin': (e) ->
+        syncr.fire() if Meteor.user() 
+*/
