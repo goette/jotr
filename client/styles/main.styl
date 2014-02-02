@@ -57,13 +57,13 @@ body
         box-shadow: none !important
         border: 0 !important
         padding: 0
-        color: #666
+        color: #999
         text-shadow: none
         font-family: 'Open Sans', sans-serif !important
         font-size 1rem
         line-height: 1.5rem
     .text-besides-image
-        color: #666
+        color: #999
         text-shadow: none
         font-family: 'Open Sans', sans-serif !important
         font-size 1rem
@@ -73,6 +73,11 @@ body
         left: 0
     .login-display-name
         &:before
-            content: 'Hi '
+            content: 'You are '
         &:after
-            content: ', '
+            content: '-'
+    .login-buttons-with-only-one-button
+        .login-text-and-button
+            position fixed
+            right: 10px
+            bottom: 4px
