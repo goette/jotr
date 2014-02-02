@@ -1,9 +1,8 @@
 <template name="app">
     {{#if currentUser}}
-        <img src="{{userImageUrl}}" alt="" class="user-image">
         <textarea class="pad-input" placeholder="" id="padin">{{content}}</textarea>
     {{else}}
-        <div id="welcome" class="welcome">Hi Nobody, you need to sign in to do things...</div>
+        <div id="welcome" class="welcome">Hi Nobody, you need to sign...<span>Hint: Checkout the bottom right corner to do that.</span></div>
     {{/if}}
     {{> loginButtons}}
 </template>
