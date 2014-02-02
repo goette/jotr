@@ -57,6 +57,11 @@ body
         box-shadow: none !important
         border: 0 !important
         padding: 0
+        color: #666
+        text-shadow: none
+        font-family: 'Open Sans', sans-serif !important
+        font-size 1rem
+        line-height: 1.5rem
     .text-besides-image
         color: #666
         text-shadow: none
@@ -66,3 +71,8 @@ body
     .login-image
         top: 5px
         left: 0
+    .login-display-name
+        &:before
+            content: 'Hi '
+        &:after
+            content: ', '
