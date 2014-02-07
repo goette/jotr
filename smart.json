@@ -1,3 +1,16 @@
 {
-  "packages": {}
+  "packages": {
+    "moment": {},
+    "fastclick": {},
+    "purecss": {},
+    "font-awesome-4": {},
+    "iron-router": {
+      "git": "https://github.com/EventedMind/iron-router",
+      "branch": "shark"
+    },
+    "spin": {},
+    "stylus-latest": {
+      "git": "https://github.com/goette/meteor-stylus-latest.git"
+    }
+  }
 }

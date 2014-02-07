@@ -26,7 +26,7 @@ var syncr = {
     }
 };
 
-Template.app.helpers({
+Template.default.helpers({
     content: function () {
         return Session.get('content');
     },
@@ -37,7 +37,7 @@ Template.app.helpers({
     }
 });
 
-Template.app.rendered = function () {
+Template.default.rendered = function () {
     Deps.autorun(function () {
         var data = Pads.findOne({'u_id': Meteor.userId()});
         if (data) {
@@ -46,7 +46,7 @@ Template.app.rendered = function () {
     });
 };
 
-Template.app.events({
+Template.default.events({
     'keyup #padin': function () {
         if (Meteor.user()) {
             syncr.fire();

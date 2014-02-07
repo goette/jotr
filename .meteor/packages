@@ -6,7 +6,13 @@
 standard-app-packages
 insecure
 preserve-inputs
-stylus
 accounts-ui
 coffeescript
 accounts-google
+iron-router
+moment
+spin
+purecss
+stylus-latest
+fastclick
+font-awesome-4

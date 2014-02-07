@@ -1,7 +1,57 @@
 {
   "meteor": {},
   "dependencies": {
-    "basePackages": {},
-    "packages": {}
+    "basePackages": {
+      "moment": {},
+      "fastclick": {},
+      "purecss": {},
+      "font-awesome-4": {},
+      "iron-router": {
+        "git": "https://github.com/EventedMind/iron-router",
+        "branch": "shark"
+      },
+      "spin": {},
+      "stylus-latest": {
+        "git": "https://github.com/goette/meteor-stylus-latest.git",
+        "branch": "master"
+      }
+    },
+    "packages": {
+      "moment": {
+        "git": "https://github.com/acreeger/meteor-moment.git",
+        "tag": "v2.5.1",
+        "commit": "8c9bc5d3fc96705057737cb9743d555417f6e551"
+      },
+      "fastclick": {
+        "git": "https://github.com/percolatestudio/meteor-fastclick",
+        "tag": "v0.6.7",
+        "commit": "fcb3bfd34d9f6874e626b4e24e8f54107938db41"
+      },
+      "purecss": {
+        "git": "https://github.com/MikkoVirenius/meteor-purecss.git",
+        "tag": "v0.3.0",
+        "commit": "1e9d4e1686efe1001960044c068a077f5e09241e"
+      },
+      "font-awesome-4": {
+        "git": "https://github.com/michaelbishop/meteor-font-awesome-4.git",
+        "tag": "v4.0.0",
+        "commit": "c28b5a0f2a2bd233c495642b40a167eda95172f5"
+      },
+      "iron-router": {
+        "git": "https://github.com/EventedMind/iron-router",
+        "branch": "shark",
+        "commit": "4f55d0acc293abb4a9492229e8d2be0ec0e176c1"
+      },
+      "spin": {
+        "git": "https://github.com/SachaG/meteor-spin.git",
+        "tag": "v0.2.2",
+        "commit": "3f655f0016228e4195acc784c45d3e3a247dc39f"
+      },
+      "stylus-latest": {
+        "git": "https://github.com/goette/meteor-stylus-latest.git",
+        "branch": "master",
+        "commit": "c059bd0710d38e74e7258916302316de5ba8e3d0"
+      }
+    }
   }
 }
