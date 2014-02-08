@@ -30,10 +30,6 @@ Template.default.helpers({
     content: function () {
         return Session.get('content');
     },
-    content_formated: function () {
-        var che = Session.get('content');
-        return linkify(che);
-    },
     userImageUrl: function () {
         if (Meteor.user().services) {
             return Meteor.user().services.google.picture;
