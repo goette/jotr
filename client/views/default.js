@@ -4,7 +4,7 @@ var syncr = {
         self.cancel();
         self.timeoutID = window.setTimeout(function () {
             self.update();
-        }, 1000);
+        }, 500);
     },
     cancel: function () {
         if(typeof this.timeoutID === "number") {
@@ -29,6 +29,10 @@ var syncr = {
 Template.default.helpers({
     content: function () {
         return Session.get('content');
+    },
+    content_formated: function () {
+        var che = Session.get('content');
+        return linkify(che);
     },
     userImageUrl: function () {
         if (Meteor.user().services) {

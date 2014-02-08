@@ -4,6 +4,10 @@
 :focus
     outline: none
 
+a
+    color: #2f668e
+    text-decoration none
+
 html,
 body
     margin: 0
@@ -12,8 +16,9 @@ body
 
 body
     font-family: 'Open Sans', sans-serif !important
-    background-color: #f0f0f0 !important
+    background-color: #fff !important
     overflow hidden
+    font-weight 400
 
 .container
     position relative
@@ -41,9 +46,10 @@ body
     font-family: 'Open Sans', sans-serif !important
     font-size 1rem
     line-height: 1.5rem
-    color: #666 !important
+    color: #292F33 !important
 
-.pad-input
+.pad-input,
+.pad-output
     position: absolute
     top: 0
     left: 0
@@ -51,6 +57,14 @@ body
     bottom: 0
     padding: 2rem 2rem 4rem
     -webkit-overflow-scrolling: touch
+
+/*.pad-input
+    opacity: 0
+
+.pad-input:focus
+    opacity: 1
+    &  ~ .pad-output
+        display: none*/
 
 .welcome
     padding-bottom 0
@@ -78,32 +92,42 @@ body
     line-height: 34px
     padding: 0 0 4px 0
     text-align: right
-    background-color: #222
+    background-color: #fff
     text-align: center
-    box-shadow: 2px -8px 20px 0 #f0f0f0
+    border-top: 1px solid #c0daed
     font-size: .75rem !important
+    animation: slideup .25s linear
     .login-button
         background: transparent !important
         box-shadow: none !important
         border: 0 !important
         padding: 0
-        color: #999
+        color: #2f668e
         text-shadow: none
         font-family: 'Open Sans', sans-serif !important
         font-size .75rem
         line-height: 1.5rem
+        font-weight 300
     .text-besides-image
-        color: #999
+        color: #2f668e
         text-shadow: none
         font-family: 'Open Sans', sans-serif !important
         font-size .75rem
         line-height: 1.5rem
         margin: 0 !important
+        font-weight 300
     .login-image
         top: 4px
         left: -2px
         display: none
     .login-display-name
-        color: #555 !important
+        font-weight 300
+        color: #90bbda !important
         &:before
             content: 'You are '
+
+@keyframes slideup
+    from
+        transform: translateY(30px)
+    to
+        transform: translateY(0)
