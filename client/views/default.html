@@ -1,9 +1,8 @@
 <template name="default">
     {{#if currentUser}}
-        <textarea class="pad-input" placeholder="" id="padin">{{content}}</textarea>
+        <textarea class="pad-input" placeholder="Go jot down something..." id="padin">{{content}}</textarea>
     {{else}}
         <div id="welcome" class="welcome">Hi Nobody, you need to sign...</div>
     {{/if}}
-    {{userImageUrl}}
     {{> loginButtons}}
 </template>

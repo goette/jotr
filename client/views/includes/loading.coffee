@@ -1,0 +1,17 @@
+Meteor.Spinner.options =
+    lines: 13
+    length: 10
+    width: 3
+    radius: 10
+    corners: 0.7
+    rotate: 0
+    direction: 1
+    color: '#90bbda'
+    speed: 1
+    trail: 70
+    shadow: false
+    hwaccel: true
+    className: 'spinner'
+    zIndex: 2e9
+    top: '120'
+    left: 'auto'
