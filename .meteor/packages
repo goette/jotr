@@ -7,7 +7,6 @@ standard-app-packages
 preserve-inputs
 accounts-ui
 coffeescript
-accounts-google
 iron-router
 moment
 spin
@@ -16,3 +15,4 @@ stylus-latest
 fastclick
 font-awesome-4
 phonegap-oauth
+accounts-twitter
