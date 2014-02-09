@@ -1,2 +1,2 @@
 Meteor.publish 'pads', ->
-    Pads.find() 
+    Pads.find({'u_id': @userId}) 

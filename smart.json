@@ -11,6 +11,7 @@
     "spin": {},
     "stylus-latest": {
       "git": "https://github.com/goette/meteor-stylus-latest.git"
-    }
+    },
+    "phonegap-oauth": {}
   }
 }

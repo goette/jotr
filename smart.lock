@@ -14,7 +14,8 @@
       "stylus-latest": {
         "git": "https://github.com/goette/meteor-stylus-latest.git",
         "branch": "master"
-      }
+      },
+      "phonegap-oauth": {}
     },
     "packages": {
       "moment": {
@@ -51,6 +52,11 @@
         "git": "https://github.com/goette/meteor-stylus-latest.git",
         "branch": "master",
         "commit": "c059bd0710d38e74e7258916302316de5ba8e3d0"
+      },
+      "phonegap-oauth": {
+        "git": "https://github.com/AdamBrodzinski/meteor-phonegap-oauth.git",
+        "tag": "v0.1.0",
+        "commit": "4b1e441eb457536b63aa8c6439426179cc3ac004"
       }
     }
   }
